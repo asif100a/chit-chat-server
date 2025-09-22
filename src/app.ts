@@ -2,8 +2,13 @@ import express, { type Application, type Request, type Response } from "express"
 import { Server } from "socket.io";
 import http from "http";
 import { User } from "./app/models/users.model";
+import cors from 'cors';
 
 const app: Application = express();
+app.use(cors({
+  origin: ['http://localhost:3000']
+}));
+
 const server = http.createServer(app);
 
 // app.post("/create-users", async (req, res) => {

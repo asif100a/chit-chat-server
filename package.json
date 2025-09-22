@@ -3,7 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot /src/server.ts"
+    "dev": "node init && bun --hot /src/server.ts"
   },
   "private": true,
   "devDependencies": {
@@ -15,10 +15,12 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "mongodb": "^6.20.0",
     "mongoose": "^8.18.1",
+    "node-fetch": "^3.3.2",
     "socket.io": "^4.8.1"
   }
 }
